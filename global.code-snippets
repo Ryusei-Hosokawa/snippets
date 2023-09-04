@@ -1,0 +1,363 @@
+{
+	// Place your GLOBAL snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	
+	// HTMLここから //
+	"webp picture": {
+		"scope": "html,php",
+		"prefix": "!picwebp",
+		"body": [
+		"<picture>",
+		"<source srcset='<?php echo APP_ASSETS; ?>img/top/img_mv_sp.jpg.webp' type='image/webp' media='(max-width:767px)'>",
+		"<source srcset='<?php echo APP_ASSETS; ?>img/top/img_mv_sp.jpg' media='(max-width:767px)'>",
+		"<source srcset='<?php echo APP_ASSETS; ?>img/top/img_mv.jpg.webp' type='image/webp'>",
+		"<img src='<?php echo APP_ASSETS; ?>img/top/img_mv.jpg' alt=''>",
+		"</picture>",
+		],
+	},
+
+	// HTMLここから //
+
+
+	// リセットCSSここから //
+	"reset css": {
+		"scope": "css,scss",
+		"prefix": "!resetcss",
+		"body": [
+			"html, body, div, span, applet, object, iframe,",
+			"h1, h2, h3, h4, h5, h6, p, blockquote, pre,",
+			"a, abbr, acronym, address, cite, code,",
+			"del, dfn, em, img, ins, kbd, q, s, samp,",
+			"sub, sup, tt, var,",
+			"b, u, i, center,",
+			"dl, dt, dd, ol, ul, li,",
+			"fieldset, form, label, legend,",
+			"table, caption, tbody, tfoot, thead, tr, th, td,",
+			"article, aside, canvas, details, embed, ",
+			"figure, figcaption, footer, header, hgroup, ",
+			"menu, nav, output, ruby, section, summary,",
+			"time, mark, audio, video {",
+			"margin: 0;",
+			"padding: 0;",
+			"border: 0;",
+			"font-size: 100%;",
+			"font: inherit;",
+			"vertical-align: baseline;",
+			"box-sizing: border-box;",
+			"word-wrap: break-word;",
+			"}",
+			"input,textarea{",
+			"box-sizing: border-box;",
+			"}",
+			"/* HTML5 display-role reset for older browsers */",
+			"article, aside, details, figcaption, figure, ",
+			"footer, header, hgroup, menu, nav, section {",
+			"display: block;",
+			"}",
+			"body {",
+			"line-height: 1;",
+			"-webkit-text-size-adjust: 100%;",
+			"}",
+			"ol, ul {",
+			"list-style: none;",
+			"}",
+			"blockquote, q {",
+			"quotes: none;",
+			"}",
+			"blockquote:before, blockquote:after,",
+			"q:before, q:after {",
+			"content: '';",
+			"content: none;",
+			"}",
+			"table {",
+			"border-collapse: collapse;",
+			"border-spacing: 0;",
+			"}",
+			"a{",
+			"text-decoration: none;",
+			"}",
+			"a:hover{",
+			"text-decoration: none;",
+			"}",
+			"img{",
+			"max-width: 100%;",
+			"height: auto;",
+			"border: 0;",
+			"vertical-align: bottom;",
+			"}",
+		],
+	},
+	// リセットCSSここまで //
+
+    // css設定ここから //
+    "@charset 'utf-8'": {
+		"scope": "css,scss",
+		"prefix": "!css",
+		"body": [
+            "@charset 'utf-8';",
+            "",
+            "// $1ここから //",
+            "// $1ここまで //",
+		],
+	},
+    // css設定ここまで //
+
+	// フォント設定ここから //
+	"font 游ゴシック": {
+		"scope": "css,scss",
+		"prefix": "!yuugothic",
+		"body": [
+			"'游ゴシック', 'YuGothic', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka,'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;"
+		],
+	},
+	
+	"font helvetica": {
+		"scope": "css,scss",
+		"prefix": "!helvetica",
+		"body": [
+			"'Helvetica','Hiragino Sans','Hiragino Kaku Gothic ProN', 'Arial', 'Yu Gothic', 'Meiryo', sans-serif;",
+		],
+	},
+	// フォント設定ここまで //
+	
+	// CSSここから //
+	"base calc": {
+		"scope": "css,scss",
+		"prefix": "!basecalc",
+		"body": [
+			"baseWidth: 1000px;",
+			"basePadding: 15px;",
+			"baseValue: calc(var(--baseWidth) + calc(var(--basePadding) * 2));",
+		],
+	},
+	
+	"base": {
+		"scope": "css,scss",
+		"prefix": "!base",
+		"body": [
+			"width: 100%;",
+			"max-width: 1000px;",
+			"margin: 0 auto;",
+		],
+	},
+	
+	"background url settings": {
+		"scope": "css,scss",
+		"prefix": "!bgimg",
+		"body": [
+			"background: url(../img/top/bg_top.png) no-repeat 50% 50% / cover;",
+		],
+	},
+
+	"media query": {
+		"scope": "css,scss",
+		"prefix": "!media",
+		"body": [
+			"@media screen and (max-width: 767px) {",
+			"}",
+		],
+	},
+
+	"width max-width": {
+		"scope": "css,scss",
+		"prefix": "!wi",
+		"body": [
+			"width: 100%;",
+			"max-width: 1px;",
+		],
+	},
+
+	"flex box": {
+		"scope": "css,scss",
+		"prefix": "!flex",
+		"body": [
+			"display: flex;",
+			"flex-direction: column;",
+			"flex-wrap: wrap;",
+			"justify-content: center;",
+			"align-items: center;",
+			"gap: 0px 0%;",
+		],
+	},
+
+	"title font": {
+		"scope": "css,scss",
+		"prefix": "!ttlf",
+		"body": [
+			"text-align: center;",
+			"font-size: 32px;",
+			"font-weight: 700;",
+			"letter-spacing: 0.1em;",
+			"line-height: 1em;",
+			"font-feature-settings: 'palt';"
+		],
+	},
+	
+	"text font": {
+		"scope": "css,scss",
+		"prefix": "!txtf",
+		"body": [
+			"text-align: left;",
+			"font-size: 16px;",
+			"font-weight: 500;",
+			"letter-spacing: 0.12em;",
+			"line-height: 1.7em;",
+			"font-feature-settings: 'palt';"
+		],
+	},
+	
+	"padding": {
+		"scope": "css,scss",
+		"prefix": "!p",
+		"body": [
+			"padding: 0 0 0;",
+		],
+	},
+
+	"margin": {
+		"scope": "css,scss",
+		"prefix": "!m",
+		"body": [
+			"margin: 0 0 0;",
+		],
+	},
+
+	"margin center": {
+		"scope": "css,scss",
+		"prefix": "!m0a",
+		"body": [
+			"margin: 0 auto;",
+		],
+	},
+
+	"absolute": {
+		"scope": "css,scss",
+		"prefix": "!ab",
+		"body": [
+			"position: absolute;",
+			"top: 0;",
+			"left: 0;",
+			"z-index: 0;",
+		],
+	},
+
+	"font feature settings": {
+		"scope": "css,scss",
+		"prefix": "!ffs",
+		"body": [
+			"font-feature-settings: 'palt';"
+		],
+	},
+
+	"border": {
+		"scope": "css,scss",
+		"prefix": "!bor",
+		"body": [
+			"border: solid 1px #000;"
+		],
+	},
+
+	"gird center": {
+		"scope": "css,scss",
+		"prefix": "!gric",
+		"body": [
+			"display: grid;",
+			"place-items: center;"
+		],
+	},
+	
+	"hover opacity": {
+		"scope": "css,scss",
+		"prefix": "!hovop",
+		"body": [
+			".hover__opacity {",
+			"opacity: 1;",
+			"transition: all 0.4s ease-in;",
+			"}",
+			"",
+			".hover__opacity:hover {",
+			"opacity: 0.1;",
+			"}",
+		],
+	},
+	
+	"nth of type": {
+		"scope": "css,scss",
+		"prefix": "!n",
+		"body": [
+			":nth-of-type(1)",
+		],
+	},
+
+	"nth of type obb": {
+		"scope": "css,scss",
+		"prefix": "!nodd",
+		"body": [
+			":nth-of-type(2n+1)",
+		],
+	},
+
+	"nth of type even": {
+		"scope": "css,scss",
+		"prefix": "!neven",
+		"body": [
+			":nth-of-type(2n)",
+		],
+	},
+	
+	"pc layout": {
+		"scope": "css,scss",
+		"prefix": "!pc",
+		"body": [
+			"sp {",
+			"    display: none;",
+			"}",
+			"",
+			"pc {",
+			"    display: block;",
+			"}",
+		],
+	},
+	
+	"sp layout": {
+		"scope": "css,scss",
+		"prefix": "!sp",
+		"body": [
+			"pc {",
+			"    display: none;",
+			"}",
+			"",
+			"sp {",
+			"    display: block;",
+			"}",
+		],
+	},
+	
+	"background object": {
+		"scope": "css,scss",
+		"prefix": "!bgobject",
+		"body": [
+			".bg__object {",
+				"position: relative;",
+				"z-index: 10;",
+			"}",
+				"",
+			".bg__object::after {",
+				"content: '';",
+				"position: absolute;",
+				"top: 100px;",
+				"left: 50px;",
+				"z-index: -10;",
+				"width: 50vw;",
+				"height: 100px;",
+				"background: red;",
+			"}",
+		],
+	},
+	// CSSここまで //
+}
+
