@@ -7,19 +7,161 @@
 	// Placeholders with the same ids are connected.
 	
 	// HTMLここから //
-	"webp picture": {
+
+	"html": {
 		"scope": "html,php",
-		"prefix": "!picwebp",
+		"prefix": "thml",
 		"body": [
-		"<picture>",
-		"<source srcset='<?php echo APP_ASSETS; ?>img/top/img_mv_sp.jpg.webp' type='image/webp' media='(max-width:767px)'>",
-		"<source srcset='<?php echo APP_ASSETS; ?>img/top/img_mv_sp.jpg' media='(max-width:767px)'>",
-		"<source srcset='<?php echo APP_ASSETS; ?>img/top/img_mv.jpg.webp' type='image/webp'>",
-		"<img src='<?php echo APP_ASSETS; ?>img/top/img_mv.jpg' alt=''>",
-		"</picture>",
+		    "<!DOCTYPE html>",
+            "<html lang='en'>",
+            "<head>",
+            "   <meta charset='UTF-8'>",
+            "   <meta name='viewport' content='width=device-width, initial-scale=1.0'>",
+            "   <title>Document</title>",
+            "   <!-- CSS読み込みここから -->",
+            "   <link rel='stylesheet' href='$1'>",
+            "   <!-- CSS読み込みここまで -->",
+            "   <!-- JS読み込みここから -->",
+            "   <script src='' defer></script>",
+            "   <!-- JS読み込みここまで -->",
+            "</head>",
+            "<body>",
+            "   <!-- ヘッダーここから -->",
+            "   <header>",
+            "   </header>",
+            "   <!-- ヘッダーここまで -->",
+            "   <!-- メインコンテンツここから -->",
+            "   <main>",
+            "   </main>",
+            "   <!-- メインコンテンツここまで -->",
+            "   <!-- フッターここから -->",
+            "   <footer>",
+            "   </footer>",
+            "   <!-- フッターここまで -->",
+            "</body>",
+            "</html>",
 		],
 	},
 
+    "alternating object": {
+		"scope": "html,php",
+		"prefix": "alternating",
+		"body": [
+            "<!-- 左に画像右にタイトルとテキストがある要素で偶数個目の要素は逆並びここから -->",
+            "<div class='sec__templates'>",
+            "    <div class='base'>",
+            "        <!-- オブジェクト1つ目ここから -->",
+            "        <div class='templates__flex__wrap'>",
+            "            <div class='templates__img__wrap'>",
+            "                <img src='https://dummyimage.com/600x400/000/fff' alt=''>",
+            "            </div>",
+            "            <div class='templates__contents__wrap'>",
+            "                <h2 class='templates__contents__ttl'>",
+            "                    タイトル",
+            "                </h2>",
+            "                <p class='templates__contents__txt'>",
+            "                    テキストテキストテキストテキストテキストテキストテキストテキストテキスト",
+            "                </p>",
+            "            </div>",
+            "        </div>",
+            "        <!-- オブジェクト1つ目ここまで -->",
+            "        <!-- オブジェクト2つ目ここから -->",
+            "        <div class='templates__flex__wrap'>",
+            "            <div class='templates__img__wrap'>",
+            "                <img src='https://dummyimage.com/600x400/000/fff' alt=''>",
+            "            </div>",
+            "            <div class='templates__contents__wrap'>",
+            "                <h2 class='templates__contents__ttl'>",
+            "                    タイトル",
+            "                </h2>",
+            "                <p class='templates__contents__txt'>",
+            "                    テキストテキストテキストテキストテキストテキストテキストテキストテキスト",
+            "                </p>",
+            "            </div>",
+            "        </div>",
+            "        <!-- オブジェクト2つ目ここまで -->",
+            "        <!-- オブジェクト3つ目ここから -->",
+            "        <div class='templates__flex__wrap'>",
+            "            <div class='templates__img__wrap'>",
+            "                <img src='https://dummyimage.com/600x400/000/fff' alt=''>",
+            "            </div>",
+            "            <div class='templates__contents__wrap'>",
+            "                <h2 class='templates__contents__ttl'>",
+            "                    タイトル",
+            "                </h2>",
+            "                <p class='templates__contents__txt'>",
+            "                    テキストテキストテキストテキストテキストテキストテキストテキストテキスト",
+            "                </p>",
+            "            </div>",
+            "        </div>",
+            "        <!-- オブジェクト3つ目ここまで -->",
+            "    </div>",
+            "</div>",
+            "<!-- 左に画像右にタイトルとテキストがある要素で偶数個目の要素は逆並びここから -->",
+		],
+	},
+
+	"webp picture": {
+		"scope": "html,php",
+		"prefix": "picwebp",
+		"body": [
+		"<picture>",
+		"   <source srcset='<?php echo APP_ASSETS; ?>img/top/img_mv_sp.jpg.webp' type='image/webp' media='(max-width:767px)'>",
+		"   <source srcset='<?php echo APP_ASSETS; ?>img/top/img_mv_sp.jpg' media='(max-width:767px)'>",
+		"   <source srcset='<?php echo APP_ASSETS; ?>img/top/img_mv.jpg.webp' type='image/webp'>",
+		"   <img src='<?php echo APP_ASSETS; ?>img/top/img_mv.jpg' alt=''>",
+		"</picture>",
+		],
+	},
+    
+	"tel link": {
+		"scope": "html,php",
+		"prefix": "tel",
+		"body": [
+		"<a href='tel:$1'>",
+        "   $1",
+        "</a>",
+		],
+	},
+
+	"ul li": {
+		"scope": "html,php",
+		"prefix": "ul",
+		"body": [
+		"<ul>",
+        "   <li>",
+        "       $1",
+        "   </li>",
+        "</ul>",
+		],
+	},
+
+	"table set": {
+		"scope": "html,php",
+		"prefix": "table",
+		"body": [
+		"<table>",
+        "   <tr>",
+        "       <th>$1</th>",
+        "       <th></th>",
+        "       <th></th>",
+        "   </tr>",
+        "   <tr>",
+        "       <td></td>",
+        "       <td></td>",
+        "       <td></td>",
+        "   </tr>",
+        "</table>",
+		],
+	},
+
+	"youtube set": {
+		"scope": "html,php",
+		"prefix": "youtube",
+		"body": [
+		"<iframe src='$1' frameborder='0'allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'allowfullscreen></iframe>",
+		],
+	},
 	// HTMLここから //
 
 
@@ -95,15 +237,15 @@
 
     // css設定ここから //
     "@charset 'utf-8'": {
-		"scope": "css,scss",
-		"prefix": "!css",
-		"body": [
+        "scope": "css,scss",
+        "prefix": "!css",
+        "body": [
             "@charset 'utf-8';",
             "",
             "// $1ここから //",
             "// $1ここまで //",
-		],
-	},
+        ],
+    },
     // css設定ここまで //
 
 	// フォント設定ここから //
@@ -122,58 +264,125 @@
 			"'Helvetica','Hiragino Sans','Hiragino Kaku Gothic ProN', 'Arial', 'Yu Gothic', 'Meiryo', sans-serif;",
 		],
 	},
+
+	"font serif template setting": {
+		"scope": "css,scss",
+		"prefix": "!seriftempate",
+		"body": [
+			"'Times New Roman', 'YuMincho', 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', serif;",
+		],
+	},
 	// フォント設定ここまで //
 	
-	// CSSここから //
-	"base calc": {
-		"scope": "css,scss",
-		"prefix": "!basecalc",
+	// CSS・SCSSここから //
+	"base css": {
+		"scope": "css",
+		"prefix": "!basecalccss",
 		"body": [
-			"baseWidth: 1000px;",
-			"basePadding: 15px;",
-			"baseValue: calc(var(--baseWidth) + calc(var(--basePadding) * 2));",
+			"--baseWidth: 1000$1px;",
+			"--basePadding: 15px;",
+			"--baseValue: calc(var(--baseWidth) + calc(var(--basePadding) * 2));",
 		],
 	},
 	
+	"base calc scss": {
+		"scope": "scss",
+		"prefix": "!basecalcscss",
+		"body": [
+			"$1baseWidth: 1000px;",
+			"$1basePadding: 15px;",
+			"$1baseValue: calc(var.$1baseWidth + calc(var.$1basePadding * 2));",
+		],
+	},
+
 	"base": {
 		"scope": "css,scss",
-		"prefix": "!base",
+		"prefix": "base",
 		"body": [
 			"width: 100%;",
-			"max-width: 1000px;",
+			"max-width: $1baseValue;",
 			"margin: 0 auto;",
 		],
 	},
 	
 	"background url settings": {
 		"scope": "css,scss",
-		"prefix": "!bgimg",
+		"prefix": "bgimage",
 		"body": [
-			"background: url(../img/top/bg_top.png) no-repeat 50% 50% / cover;",
+			"background: url(../img/top/bg_top.png$1) no-repeat 50% 50% / cover;",
+		],
+	},
+
+    "modern youtube set": {
+		"scope": "css",
+		"prefix": "youtubemoderncss",
+		"body": [
+            ".youtube {",
+            "    width: 100%;",
+            "    aspect-ratio: 16 / 9;",
+            "}",
+            "",
+            ".youtube iframe {",
+            "    width: 100%;",
+            "    height: 100%;",
+            "}",
+		],
+	},
+    
+    "standard youtube set": {
+		"scope": "css",
+		"prefix": "youtubestandardcss",
+		"body": [
+            ".youtube {",
+            "    position: relative;",
+            "    width: 100%;",
+            "    padding-top: 56.25%;",
+            "}",
+            "",
+            ".youtube iframe {",
+            "    position: absolute;",
+            "    top: 0;",
+            "    right: 0;",
+            "    width: 100%;",
+            "    height: 100%;",
+            "}",
 		],
 	},
 
 	"media query": {
 		"scope": "css,scss",
-		"prefix": "!media",
+		"prefix": "media",
 		"body": [
 			"@media screen and (max-width: 767px) {",
+			"   $1",
 			"}",
+			"",
+		],
+	},
+
+	"media query >": {
+		"scope": "css,scss",
+		"prefix": "media>",
+		"body": [
+			"@media screen and (767px > width > 899px) {",
+            "   $1",
+			"}",
+			"",
 		],
 	},
 
 	"width max-width": {
 		"scope": "css,scss",
-		"prefix": "!wi",
+		"prefix": "maxwidth",
 		"body": [
 			"width: 100%;",
-			"max-width: 1px;",
+			"max-width: $1px;",
 		],
 	},
 
 	"flex box": {
 		"scope": "css,scss",
-		"prefix": "!flex",
+		"prefix": "flexbox",
 		"body": [
 			"display: flex;",
 			"flex-direction: column;",
@@ -181,46 +390,138 @@
 			"justify-content: center;",
 			"align-items: center;",
 			"gap: 0px 0%;",
+			"$1",
 		],
 	},
 
-	"title font": {
-		"scope": "css,scss",
-		"prefix": "!ttlf",
+	"css variable setting": {
+		"scope": "css",
+		"prefix": "!:root",
 		"body": [
-			"text-align: center;",
-			"font-size: 32px;",
-			"font-weight: 700;",
-			"letter-spacing: 0.1em;",
-			"line-height: 1em;",
-			"font-feature-settings: 'palt';"
+            "/* CSS変数定義ここから */",
+            ":root {",
+            "   --sliderSpeed: 30s;",
+            "}",
+            "/* CSS変数定義ここまで */",
+            "$1",
+		],
+	},
+
+	"variable css title font": {
+		"scope": "css",
+		"prefix": "!varrootttl",
+		"body": [
+			"/* タイトルフォント変数定義ここから */",
+			"--txtAlignTtl: center;",
+			"--fontSizeTtl: 34px;",
+			"--fontWeightTtl: 700;",
+			"--letterSpacingTtl: 0.1em;",
+			"--lineHeightTtl: 1.0em;",
+			"/* タイトルフォント変数定義ここまで */",
+		],
+	},
+    
+	"variable scss title font": {
+		"scope": "scss",
+		"prefix": "!varttl",
+		"body": [
+			"/* タイトルフォント変数定義ここから */",
+			"$txtAlignTtl: center;",
+			"$fontSizeTtl: 34px;",
+			"$fontWeightTtl: 700;",
+			"$letterSpacingTtl: 0.1em;",
+			"$lineHeightTtl: 1.0em;",
+			"/* タイトルフォント変数定義ここまで */",
+		],
+	},
+
+	"css title font": {
+		"scope": "css",
+		"prefix": "ttlfont",
+		"body": [
+			"text-align: var(--txtAlignTtl);",
+			"font-size: var(--fontSizeTtl);",
+			"font-weight: var(--fontWeightTtl);",
+			"letter-spacing: var(--letterSpacingTtl);",
+			"line-height: var(--lineHeightTtl);",
 		],
 	},
 	
-	"text font": {
-		"scope": "css,scss",
-		"prefix": "!txtf",
+	"scss title font": {
+		"scope": "scss",
+		"prefix": "ttlfont",
 		"body": [
-			"text-align: left;",
-			"font-size: 16px;",
-			"font-weight: 500;",
-			"letter-spacing: 0.12em;",
-			"line-height: 1.7em;",
-			"font-feature-settings: 'palt';"
+			"text-align: var.$txtAlignTtl;",
+			"font-size: var.$fontSizeTtl;",
+			"font-weight: var.$fontWeightTtl;",
+			"letter-spacing: var.$letterSpacingTtl;",
+			"line-height: var.$lineHeightTtl;",
+		],
+	},
+
+    "variable css text font": {
+		"scope": "css",
+		"prefix": "!varroottxt",
+		"body": [
+			"/* テキストフォント変数定義ここから */",
+			"--txtAlignTtl: center$1;",
+			"--fontSizeTtl: 16px;",
+			"--fontWeightTtl: 500;",
+			"--letterSpacingTtl: 0.1em;",
+			"--lineHeightTtl: 1.75em;",
+			"/* テキストフォント変数定義ここまで */",
+		],
+	},
+    
+    "variable scss text font": {
+		"scope": "scss",
+		"prefix": "!vartxt",
+		"body": [
+			"/* テキストフォント変数定義ここから */",
+			"$1txtAlignTxt: center;",
+			"$1fontSizeTxt: 16px;",
+			"$1fontWeightTxt: 500;",
+			"$1letterSpacingTxt: 0.1em;",
+			"$1lineHeightTxt: 1.75em;",
+			"/* テキストフォント変数定義ここまで */",
+		],
+	},
+
+	"css text font": {
+		"scope": "css",
+		"prefix": "txtfont",
+		"body": [
+			"text-align: var(--txtAlignTxt);",
+			"font-size: var(--fontSizeTxt;)",
+			"font-weight: var(--fontWeightTxt;)",
+			"letter-spacing: var(--letterSpacingTxt;)",
+			"line-height: var(--lineHeightTxt;)",
+		],
+	},
+
+	"scss text font": {
+		"scope": "scss",
+		"prefix": "txtfont",
+		"body": [
+			"text-align: var.$1txtAlignTxt;",
+			"font-size: var.$1fontSizeTxt;",
+			"font-weight: var.$1fontWeightTxt;",
+			"letter-spacing: var.$1letterSpacingTxt;",
+			"line-height: var.$1lineHeightTxt;",
 		],
 	},
 	
 	"padding": {
 		"scope": "css,scss",
-		"prefix": "!p",
+		"prefix": "p",
 		"body": [
-			"padding: 0 0 0;",
+			"padding: 0 0 0$1;",
 		],
 	},
 
 	"margin": {
 		"scope": "css,scss",
-		"prefix": "!m",
+		"prefix": "m",
 		"body": [
 			"margin: 0 0 0;",
 		],
@@ -228,7 +529,7 @@
 
 	"margin center": {
 		"scope": "css,scss",
-		"prefix": "!m0a",
+		"prefix": "margincenter",
 		"body": [
 			"margin: 0 auto;",
 		],
@@ -236,10 +537,10 @@
 
 	"absolute": {
 		"scope": "css,scss",
-		"prefix": "!ab",
+		"prefix": "positionabsolute",
 		"body": [
 			"position: absolute;",
-			"top: 0;",
+			"top: 0$1;",
 			"left: 0;",
 			"z-index: 0;",
 		],
@@ -247,7 +548,7 @@
 
 	"font feature settings": {
 		"scope": "css,scss",
-		"prefix": "!ffs",
+		"prefix": "ffs",
 		"body": [
 			"font-feature-settings: 'palt';"
 		],
@@ -255,24 +556,25 @@
 
 	"border": {
 		"scope": "css,scss",
-		"prefix": "!bor",
+		"prefix": "border",
 		"body": [
-			"border: solid 1px #000;"
+			"border: solid 1px #000$1;",
 		],
 	},
 
 	"gird center": {
 		"scope": "css,scss",
-		"prefix": "!gric",
+		"prefix": "gridcenter",
 		"body": [
 			"display: grid;",
-			"place-items: center;"
+			"place-items: center;",
+			"$1",
 		],
 	},
 	
 	"hover opacity": {
 		"scope": "css,scss",
-		"prefix": "!hovop",
+		"prefix": "hoveropacity",
 		"body": [
 			".hover__opacity {",
 			"opacity: 1;",
@@ -285,61 +587,56 @@
 		],
 	},
 	
-	"nth of type": {
+	"nth child": {
 		"scope": "css,scss",
-		"prefix": "!n",
+		"prefix": ":nthchild",
 		"body": [
-			":nth-of-type(1)",
+			":nth-child($1) {",
+			"   $2",
+			"}",
 		],
 	},
 
-	"nth of type obb": {
+	"nth child obb": {
 		"scope": "css,scss",
-		"prefix": "!nodd",
+		"prefix": ":nthchildodd",
 		"body": [
-			":nth-of-type(2n+1)",
+			":nth-of-type(odd) {",
+            "   $1",
+			"}",
 		],
 	},
 
-	"nth of type even": {
+	"nth child even": {
 		"scope": "css,scss",
-		"prefix": "!neven",
+		"prefix": ":nthchildeven",
 		"body": [
-			":nth-of-type(2n)",
+			":nth-of-type(even) {",
+            "   $1",
+            "}",
 		],
 	},
 	
-	"pc layout": {
+	"pc sp layout": {
 		"scope": "css,scss",
-		"prefix": "!pc",
+		"prefix": "!pcsp",
 		"body": [
-			"sp {",
-			"    display: none;",
-			"}",
-			"",
-			"pc {",
-			"    display: block;",
-			"}",
-		],
-	},
-	
-	"sp layout": {
-		"scope": "css,scss",
-		"prefix": "!sp",
-		"body": [
-			"pc {",
-			"    display: none;",
-			"}",
-			"",
-			"sp {",
-			"    display: block;",
-			"}",
+			"@media screen and (min-width: 768px) {",
+            "    .sp {",
+            "        display: none;",
+            "    }",
+            "}",
+            "@media screen and (max-width: 767px) {",
+            "    .pc {",
+            "        display: none;",
+            "    }",
+            "}",
 		],
 	},
 	
 	"background object": {
 		"scope": "css,scss",
-		"prefix": "!bgobject",
+		"prefix": "bgobject",
 		"body": [
 			".bg__object {",
 				"position: relative;",
@@ -358,6 +655,120 @@
 			"}",
 		],
 	},
+    
+	"alternating layout": {
+		"scope": "scss",
+		"prefix": "alternating",
+		"body": [
+			"/* ベース変数定義ここから */",
+            "$baseWidth: 1000px;",
+            "$basePadding: 15px;",
+            "$baseValue: calc($baseWidth + calc($basePadding * 2));",
+            "/* ベース変数定義ここまで */",
+            "/* タイトルフォント変数定義ここから */",
+            "$fontSizeTtl: 34px;",
+            "$fontWeightTtl: 700;",
+            "$letterSpacingTtl: 0.1em;",
+            "$lineHeightTtl: 1em;",
+            "/* タイトルフォント変数定義ここまで */",
+            "/* テキストフォント変数定義ここから */",
+            "$fontSizeTxt: 16px;",
+            "$fontWeightTxt: 500;",
+            "$letterSpacingTxt: 0.1em;",
+            "$lineHeightTxt: 1.75em;",
+            "/* テキストフォント変数定義ここまで */",
+            "",
+            "/* 交互要素レイアウトここから */",
+            ".sec__templates {",
+            "    .base {",
+            "        width: 100%;",
+            "        max-width: $baseValue;",
+            "        margin: 0 auto;",
+            "        padding: 0 $basePadding;",
+            "        .templates {",
+            "            &__flex__wrap {",
+            "                display: flex;",
+            "                justify-content: left;",
+            "                align-items: center;",
+            "                gap: 0 3%;",
+            "                &:not(:last-child) {",
+            "                    margin-bottom: 50px;",
+            "                }",
+            "                &:nth-child(even) {",
+            "                    flex-direction: row-reverse;",
+            "                    justify-content: right;",
+            "                }",
+            "            }",
+            "            &__img__wrap {",
+            "                width: 50%;",
+            "                img {",
+            "                    width: 100%;",
+            "                }",
+            "            }",
+            "            &__contents {",
+            "                &__wrap {",
+            "                    width: 40%;",
+            "                }",
+            "                &__ttl {",
+            "                    font-size: $fontSizeTtl;",
+            "                    font-weight: $fontWeightTtl;",
+            "                    letter-spacing: $letterSpacingTtl;",
+            "                    line-height: $lineHeightTtl;",
+            "                }",
+            "                &__txt {",
+            "                    font-size: $fontSizeTxt;",
+            "                    font-weight: $fontWeightTxt;",
+            "                    letter-spacing: $letterSpacingTxt;",
+            "                    line-height: $lineHeightTxt;",
+            "                }",
+            "            }",
+            "        }",
+            "    }",
+            "}",
+            "/* 交互要素レイアウトここまで */",
+		],
+	},
+	
 	// CSSここまで //
-}
+    
 
+    //JSここから
+    "javascript source": {
+		"scope": "html,php",
+		"prefix": "!jslink",
+		"body": [
+            "<!--js-->",
+            "   <script src='<?php echo APP_ASSETS; ?>js/vanilla.min.js' defer></script>",
+            "<!--/js-->",
+            "$1",
+		],
+	},
+
+    "console log": {
+		"scope": "javascript,typescript",
+		"prefix": "!console",
+		"body": [
+			"console.log();",
+		],
+	},
+    // scroll animation 
+    "header change color": {
+		"scope": "javascript,typescript",
+		"prefix": "!scrolltogglclass",
+		"body": [
+			"// ヘッダー内のロゴの色をファーストビューを超えたら変更ここから",
+            "const headerLogo = document.querySelector('.header__logo');",
+            "document.addEventListener('scroll', () => {",
+            "   const targetElement = document.querySelector('.fv__hero__wrap');",
+            "   const getElementDistance = targetElement.getBoundingClientRect().bottom;",
+            "   if (30 > getElementDistance) {",
+            "       headerLogo.classList.add('changeColor');",
+            "   } else {",
+            "       headerLogo.classList.remove('changeColor');",
+            "   }",
+            "});",
+            "// ヘッダー内のロゴの色をファーストビューを超えたら変更ここまで",
+		],
+	},
+    //JSここまで
+}
