@@ -258,7 +258,7 @@
         "scope": "css,scss",
         "prefix": "!css",
         "body": [
-            "@charset 'utf-8';",
+            "@charset \"utf-8\";",
             "",
             "// $1ここから //",
             "// $1ここまで //",
@@ -301,17 +301,77 @@
 			"'Times New Roman', 'YuMincho', 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', serif;",
 		],
 	},
+    
+	"local font setting": {
+		"scope": "css,scss",
+		"prefix": "!localfont",
+		"body": [
+			"@font-face {",
+            "    font-family: \"HankenGrotesk\"; /* フォント名 */",
+            "    src: url(\"../fonts/static/HankenGrotesk-Bold.ttf\") format(\"woff\");",
+            "    src: url(\"../fonts/static/HankenGrotesk-ExtraBold.ttf\") format(\"woff\");",
+            "    src: url(\"../fonts/static/HankenGrotesk-Medium.ttf\") format(\"woff\");",
+            "}",
+		],
+	},
+
+    "color": {
+		"scope": "css, scss",
+		"prefix": "color",
+		"body": [
+			"color: #$fff;",
+		],
+	},
 	// フォント設定ここまで //
+
+    // コンポーネント設計ここから //
+	"@use": {
+		"scope": "scss",
+		"prefix": "atu",
+		"body": [
+			"@use '$1';",
+		],
+	},
+
+    "@forward": {
+        "scope": "scss",
+        "prefix": "atf",
+        "body": [
+            "@forward '$1';",
+        ],
+    },
+
+    "@mixin": {
+        "scope": "scss",
+        "prefix": "atm",
+        "body": [
+            "@mixin $1 {",
+            "   $2",
+            "}",
+        ],
+    },
+
+	"@include": {
+		"scope": "scss",
+		"prefix": "ati",
+		"body": [
+			"@include $1;",
+		],
+	},
+    // コンポーネント設計ここまで //
 	
 	// CSS・SCSSここから //
-	"base css": {
-		"scope": "css",
-		"prefix": "!basecalccss",
+	"base": {
+		"scope": "css, scss",
+		"prefix": "base",
 		"body": [
-			"--baseWidth: 1000$1px;",
-			"--basePadding: 15px;",
-			"--baseValue: calc(var(--baseWidth) + calc(var(--basePadding) * 2));",
-		],
+			".base {",
+            "   width: 100%;",
+            "   max-width: 1000$1px;",
+            "   margin: 0 auto;",
+            "   padding: 0 15px;",
+            "}",
+        ],
 	},
 	
 	"box shadow": {
@@ -319,26 +379,6 @@
 		"prefix": "shadow",
 		"body": [
 			"box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5$1);",
-		],
-	},
-
-	"base calc scss": {
-		"scope": "scss",
-		"prefix": "!basecalcscss",
-		"body": [
-			"$1baseWidth: 1000px;",
-			"$1basePadding: 15px;",
-			"$1baseValue: calc(var.$1baseWidth + calc(var.$1basePadding * 2));",
-		],
-	},
-
-	"base": {
-		"scope": "css,scss",
-		"prefix": "base",
-		"body": [
-			"width: 100%;",
-			"max-width: $1baseValue;",
-			"margin: 0 auto;",
 		],
 	},
 	
@@ -350,6 +390,7 @@
 		],
 	},
 
+    // You Tubeの埋め込みレスポンシブ対応ここから //
     "modern youtube set": {
 		"scope": "css",
 		"prefix": "youtubemoderncss",
@@ -385,13 +426,14 @@
             "}",
 		],
 	},
+    // You Tubeの埋め込みレスポンシブ対応ここまで //
+
 
 	"media query": {
 		"scope": "css,scss",
 		"prefix": "media",
 		"body": [
-			"@media screen and (max-width: 767px) {",
-			"   $1",
+			"@media screen and (max-width: 767$1px) {",
 			"}",
 		],
 	},
@@ -400,8 +442,7 @@
 		"scope": "css,scss",
 		"prefix": "mediawidth",
 		"body": [
-			"@media screen and (767px < width < 899px) {",
-            "   $1",
+			"@media screen and (767px < width < 899$1px) {",
 			"}",
 		],
 	},
@@ -442,115 +483,35 @@
 		],
 	},
 
-	"variable css title font": {
-		"scope": "css",
-		"prefix": "!varrootttl",
-		"body": [
-			"/* タイトルフォント変数定義ここから */",
-			"--txtAlignTtl: center;",
-			"--fontSizeTtl: 34px;",
-			"--fontWeightTtl: 700;",
-			"--letterSpacingTtl: 0.1em;",
-			"--lineHeightTtl: 1.0em;",
-			"/* タイトルフォント変数定義ここまで */",
-		],
-	},
-    
-	"variable scss title font": {
-		"scope": "scss",
-		"prefix": "!varttl",
-		"body": [
-			"/* タイトルフォント変数定義ここから */",
-			"$txtAlignTtl: center;",
-			"$fontSizeTtl: 34px;",
-			"$fontWeightTtl: 700;",
-			"$letterSpacingTtl: 0.1em;",
-			"$lineHeightTtl: 1.0em;",
-			"/* タイトルフォント変数定義ここまで */",
-		],
-	},
-
 	"css title font": {
-		"scope": "css",
+		"scope": "css, scss",
 		"prefix": "ttlfont",
 		"body": [
-			"text-align: var(--txtAlignTtl);",
-			"font-size: var(--fontSizeTtl);",
-			"font-weight: var(--fontWeightTtl);",
-			"letter-spacing: var(--letterSpacingTtl);",
-			"line-height: var(--lineHeightTtl);",
+			"text-align: center;",
+			"font-size: 34px;",
+			"font-weight: 700;",
+			"letter-spacing: 0.05em;",
+			"line-height: 1em;",
 		],
 	},
 	
-	"scss title font": {
-		"scope": "scss",
-		"prefix": "ttlfont",
-		"body": [
-			"text-align: var.$txtAlignTtl;",
-			"font-size: var.$fontSizeTtl;",
-			"font-weight: var.$fontWeightTtl;",
-			"letter-spacing: var.$letterSpacingTtl;",
-			"line-height: var.$lineHeightTtl;",
-		],
-	},
-
-    "variable css text font": {
-		"scope": "css",
-		"prefix": "!varroottxt",
-		"body": [
-			"/* テキストフォント変数定義ここから */",
-			"--txtAlignTtl: center$1;",
-			"--fontSizeTtl: 16px;",
-			"--fontWeightTtl: 500;",
-			"--letterSpacingTtl: 0.1em;",
-			"--lineHeightTtl: 1.75em;",
-			"/* テキストフォント変数定義ここまで */",
-		],
-	},
-    
-    "variable scss text font": {
-		"scope": "scss",
-		"prefix": "!vartxt",
-		"body": [
-			"/* テキストフォント変数定義ここから */",
-			"$1txtAlignTxt: center;",
-			"$1fontSizeTxt: 16px;",
-			"$1fontWeightTxt: 500;",
-			"$1letterSpacingTxt: 0.1em;",
-			"$1lineHeightTxt: 1.75em;",
-			"/* テキストフォント変数定義ここまで */",
-		],
-	},
-
-	"css text font": {
-		"scope": "css",
+    "css text font": {
+		"scope": "css, scss",
 		"prefix": "txtfont",
 		"body": [
-			"text-align: var(--txtAlignTxt);",
-			"font-size: var(--fontSizeTxt;)",
-			"font-weight: var(--fontWeightTxt;)",
-			"letter-spacing: var(--letterSpacingTxt;)",
-			"line-height: var(--lineHeightTxt;)",
+			"text-align: center;",
+			"font-size: 16px;",
+			"font-weight: 500;",
+			"letter-spacing: 0.05em;",
+			"line-height: 1.75em;",
 		],
 	},
 
-	"scss text font": {
-		"scope": "scss",
-		"prefix": "txtfont",
-		"body": [
-			"text-align: var.$1txtAlignTxt;",
-			"font-size: var.$1fontSizeTxt;",
-			"font-weight: var.$1fontWeightTxt;",
-			"letter-spacing: var.$1letterSpacingTxt;",
-			"line-height: var.$1lineHeightTxt;",
-		],
-	},
-	
 	"padding": {
 		"scope": "css,scss",
 		"prefix": "p",
 		"body": [
-			"padding: 0 0 0$1;",
+			"padding: 0 0$1 0;",
 		],
 	},
 
@@ -558,7 +519,7 @@
 		"scope": "css,scss",
 		"prefix": "m",
 		"body": [
-			"margin: 0 0 0$1;",
+			"margin: 0 0$1 0;",
 		],
 	},
 
@@ -566,7 +527,7 @@
 		"scope": "css,scss",
 		"prefix": "mz",
 		"body": [
-			"margin: 0 auto;",
+			"margin: 0$1 auto;",
 		],
 	},
 
@@ -711,14 +672,14 @@
 			"}",
 				"",
 			".bg__object::after {",
-				"content: '';",
-				"position: absolute;",
-				"top: 100px;",
-				"left: 50px;",
-				"z-index: -10;",
-				"width: 50vw;",
-				"height: 100px;",
-				"background: red;",
+			"   content: '';",
+			"   position: absolute;",
+			"   top: 100px;",
+			"   left: 50px;",
+			"   z-index: -10;",
+			"   width: 50vw;",
+			"   height: 100px;",
+			"   background: red;",
 			"}",
 		],
 	},
@@ -728,14 +689,14 @@
 		"prefix": "before",
 		"body": [
 			"&::before {",
-				"content: '';",
-				"position: absolute;",
-				"top: 100px;",
-				"left: 50px;",
-				"z-index: -10;",
-				"width: 50vw;",
-				"height: 100px;",
-				"background: red;",
+			"   content: '';",
+			"   position: absolute;",
+			"   top: 100px;",
+			"   left: 50px;",
+			"   z-index: -10;",
+			"   width: 50vw;",
+			"   height: 100px;",
+			"   background: red;",
 			"}",
 		],
 	},
@@ -745,14 +706,14 @@
 		"prefix": "after",
 		"body": [
 			"&::after {",
-				"content: '';",
-				"position: absolute;",
-				"top: 100px;",
-				"left: 50px;",
-				"z-index: -10;",
-				"width: 50vw;",
-				"height: 100px;",
-				"background: red;",
+			"   content: '';",
+			"   position: absolute;",
+			"   top: 100px;",
+			"   left: 50px;",
+			"   z-index: -10;",
+			"   width: 50vw;",
+			"   height: 100px;",
+			"   background: red;",
 			"}",
 		],
 	},
@@ -761,31 +722,13 @@
 		"scope": "scss",
 		"prefix": "alternating",
 		"body": [
-			"/* ベース変数定義ここから */",
-            "$baseWidth: 1000px;",
-            "$basePadding: 15px;",
-            "$baseValue: calc($baseWidth + calc($basePadding * 2));",
-            "/* ベース変数定義ここまで */",
-            "/* タイトルフォント変数定義ここから */",
-            "$fontSizeTtl: 34px;",
-            "$fontWeightTtl: 700;",
-            "$letterSpacingTtl: 0.1em;",
-            "$lineHeightTtl: 1em;",
-            "/* タイトルフォント変数定義ここまで */",
-            "/* テキストフォント変数定義ここから */",
-            "$fontSizeTxt: 16px;",
-            "$fontWeightTxt: 500;",
-            "$letterSpacingTxt: 0.1em;",
-            "$lineHeightTxt: 1.75em;",
-            "/* テキストフォント変数定義ここまで */",
-            "",
-            "/* 交互要素レイアウトここから */",
+			"/* 交互要素レイアウトここから */",
             ".sec__templates {",
             "    .base {",
             "        width: 100%;",
-            "        max-width: $baseValue;",
+            "        max-width: 1000px;",
             "        margin: 0 auto;",
-            "        padding: 0 $basePadding;",
+            "        padding: 0 15px;",
             "        .templates {",
             "            &__flex__wrap {",
             "                display: flex;",
@@ -809,18 +752,6 @@
             "            &__contents {",
             "                &__wrap {",
             "                    width: 40%;",
-            "                }",
-            "                &__ttl {",
-            "                    font-size: $fontSizeTtl;",
-            "                    font-weight: $fontWeightTtl;",
-            "                    letter-spacing: $letterSpacingTtl;",
-            "                    line-height: $lineHeightTtl;",
-            "                }",
-            "                &__txt {",
-            "                    font-size: $fontSizeTxt;",
-            "                    font-weight: $fontWeightTxt;",
-            "                    letter-spacing: $letterSpacingTxt;",
-            "                    line-height: $lineHeightTxt;",
             "                }",
             "            }",
             "        }",
