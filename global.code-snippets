@@ -845,9 +845,9 @@
 
     "console log": {
 		"scope": "javascript,typescript",
-		"prefix": "!console",
+		"prefix": "!con",
 		"body": [
-			"console.log();",
+			"console.log($);",
 		],
 	},
     // scroll animation 
