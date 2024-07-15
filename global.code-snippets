@@ -1,19 +1,18 @@
 {
-	// Place your GLOBAL snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
-	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
-	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
-	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
-	// Placeholders with the same ids are connected.
-	
-	// HTMLここから //
+    // Place your GLOBAL snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+    // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+    // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+    // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+    // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+    // Placeholders with the same ids are connected.
 
+    // HTMLここから //
 
-	"html": {
-		"scope": "html,php",
-		"prefix": "thml",
-		"body": [
-		    "<!DOCTYPE html>",
+    "html": {
+        "scope": "html,php",
+        "prefix": "thml",
+        "body": [
+            "<!DOCTYPE html>",
             "<html lang='en'>",
             "<head>",
             "   <meta charset='UTF-8'>",
@@ -40,31 +39,26 @@
             "   </footer>",
             "   <!-- フッターここまで -->",
             "</body>",
-            "</html>",
-		],
-	},
-	
-	"comment html php": {
-		"scope": "html,php",
-		"prefix": "koko",
-		"body": [
-			" $1 ここから ",
-			" $1 ここまで ",
-		],
-	},
-	
-	"empty object": {
-		"scope": "html,php",
-		"prefix": "empty",
-		"body": [
-			"&nbsp;",
-		],
-	},
+            "</html>"
+        ]
+    },
+
+    "comment html php": {
+        "scope": "html,php",
+        "prefix": "koko",
+        "body": [" $1 ここから ", " $1 ここまで "]
+    },
+
+    "empty object": {
+        "scope": "html,php",
+        "prefix": "empty",
+        "body": ["&nbsp;"]
+    },
 
     "alternating object": {
-		"scope": "html,php",
-		"prefix": "alternating",
-		"body": [
+        "scope": "html,php",
+        "prefix": "alternating",
+        "body": [
             "<!-- 左に画像右にタイトルとテキストがある要素で偶数個目の要素は逆並びここから -->",
             "<div class='sec__templates'>",
             "    <div class='base'>",
@@ -115,143 +109,132 @@
             "        <!-- オブジェクト3つ目ここまで -->",
             "    </div>",
             "</div>",
-            "<!-- 左に画像右にタイトルとテキストがある要素で偶数個目の要素は逆並びここから -->",
-		],
-	},
+            "<!-- 左に画像右にタイトルとテキストがある要素で偶数個目の要素は逆並びここから -->"
+        ]
+    },
 
-	"webp picture": {
-		"scope": "html,php",
-		"prefix": "picwebp",
-		"body": [
-		"<picture>",
-		"   <source srcset='<?php echo APP_ASSETS; ?>img/top/img_mv_sp.jpg.webp' type='image/webp' media='(max-width:767px)'>",
-		"   <source srcset='<?php echo APP_ASSETS; ?>img/top/img_mv_sp.jpg' media='(max-width:767px)'>",
-		"   <source srcset='<?php echo APP_ASSETS; ?>img/top/img_mv.jpg.webp' type='image/webp'>",
-		"   <img src='<?php echo APP_ASSETS; ?>img/top/img_mv.jpg' alt=''>",
-		"</picture>",
-		],
-	},
-    
-	"tel link": {
-		"scope": "html,php",
-		"prefix": "tellink",
-		"body": [
-		"<a href='tel:$1'>",
-        "   $1",
-        "</a>",
-		],
-	},
+    "webp picture": {
+        "scope": "html,php",
+        "prefix": "picwebp",
+        "body": [
+            "<picture>",
+            "   <source srcset='<?php echo APP_ASSETS; ?>img/top/img_mv_sp.jpg.webp' type='image/webp' media='(max-width:767px)'>",
+            "   <source srcset='<?php echo APP_ASSETS; ?>img/top/img_mv_sp.jpg' media='(max-width:767px)'>",
+            "   <source srcset='<?php echo APP_ASSETS; ?>img/top/img_mv.jpg.webp' type='image/webp'>",
+            "   <img src='<?php echo APP_ASSETS; ?>img/top/img_mv.jpg' alt=''>",
+            "</picture>"
+        ]
+    },
 
-	"ul li": {
-		"scope": "html,php",
-		"prefix": "ul",
-		"body": [
-		"<ul>",
-        "   <li>",
-        "       $1",
-        "   </li>",
-        "</ul>",
-		],
-	},
+    "tel link": {
+        "scope": "html,php",
+        "prefix": "tellink",
+        "body": ["<a href='tel:$1'>", "   $1", "</a>"]
+    },
 
-	"table set": {
-		"scope": "html,php",
-		"prefix": "table",
-		"body": [
-		"<table>",
-        "   <tr>",
-        "       <th>$1</th>",
-        "       <th></th>",
-        "       <th></th>",
-        "   </tr>",
-        "   <tr>",
-        "       <td></td>",
-        "       <td></td>",
-        "       <td></td>",
-        "   </tr>",
-        "</table>",
-		],
-	},
+    "ul li": {
+        "scope": "html,php",
+        "prefix": "ul",
+        "body": ["<ul>", "   <li>", "       $1", "   </li>", "</ul>"]
+    },
 
-	"youtube set": {
-		"scope": "html,php",
-		"prefix": "youtube",
-		"body": [
-		"<iframe src='$1' frameborder='0'allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'allowfullscreen></iframe>",
-		],
-	},
-	// HTMLここから //
+    "table set": {
+        "scope": "html,php",
+        "prefix": "table",
+        "body": [
+            "<table>",
+            "   <tr>",
+            "       <th>$1</th>",
+            "       <th></th>",
+            "       <th></th>",
+            "   </tr>",
+            "   <tr>",
+            "       <td></td>",
+            "       <td></td>",
+            "       <td></td>",
+            "   </tr>",
+            "</table>"
+        ]
+    },
 
+    "youtube set": {
+        "scope": "html,php",
+        "prefix": "youtube",
+        "body": [
+            "<iframe src='$1' frameborder='0'allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'allowfullscreen></iframe>"
+        ]
+    },
+    // HTMLここから //
 
-	// リセットCSSここから //
-	"reset css": {
-		"scope": "css,scss",
-		"prefix": "!resetcss",
-		"body": [
-			"html, body, div, span, applet, object, iframe,",
-			"h1, h2, h3, h4, h5, h6, p, blockquote, pre,",
-			"a, abbr, acronym, address, cite, code,",
-			"del, dfn, em, img, ins, kbd, q, s, samp,",
-			"sub, sup, tt, var,",
-			"b, u, i, center,",
-			"dl, dt, dd, ol, ul, li,",
-			"fieldset, form, label, legend,",
-			"table, caption, tbody, tfoot, thead, tr, th, td,",
-			"article, aside, canvas, details, embed, ",
-			"figure, figcaption, footer, header, hgroup, ",
-			"menu, nav, output, ruby, section, summary,",
-			"time, mark, audio, video {",
-			"margin: 0;",
-			"padding: 0;",
-			"border: 0;",
-			"font-size: 100%;",
-			"font: inherit;",
-			"vertical-align: baseline;",
-			"box-sizing: border-box;",
-			"word-wrap: break-word;",
-			"}",
-			"input,textarea{",
-			"box-sizing: border-box;",
-			"}",
-			"/* HTML5 display-role reset for older browsers */",
-			"article, aside, details, figcaption, figure, ",
-			"footer, header, hgroup, menu, nav, section {",
-			"display: block;",
-			"}",
-			"body {",
-			"line-height: 1;",
-			"-webkit-text-size-adjust: 100%;",
-			"}",
-			"ol, ul {",
-			"list-style: none;",
-			"}",
-			"blockquote, q {",
-			"quotes: none;",
-			"}",
-			"blockquote:before, blockquote:after,",
-			"q:before, q:after {",
-			"content: '';",
-			"content: none;",
-			"}",
-			"table {",
-			"border-collapse: collapse;",
-			"border-spacing: 0;",
-			"}",
-			"a{",
-			"text-decoration: none;",
-			"}",
-			"a:hover{",
-			"text-decoration: none;",
-			"}",
-			"img{",
-			"max-width: 100%;",
-			"height: auto;",
-			"border: 0;",
-			"vertical-align: bottom;",
-			"}",
-		],
-	},
-	// リセットCSSここまで //
+    // リセットCSSここから //
+    "reset css": {
+        "scope": "css,scss",
+        "prefix": "!resetcss",
+        "body": [
+            "html, body, div, span, applet, object, iframe,",
+            "h1, h2, h3, h4, h5, h6, p, blockquote, pre,",
+            "a, abbr, acronym, address, cite, code,",
+            "del, dfn, em, img, ins, kbd, q, s, samp,",
+            "sub, sup, tt, var,",
+            "b, u, i, center,",
+            "dl, dt, dd, ol, ul, li,",
+            "fieldset, form, label, legend,",
+            "table, caption, tbody, tfoot, thead, tr, th, td,",
+            "article, aside, canvas, details, embed, ",
+            "figure, figcaption, footer, header, hgroup, ",
+            "menu, nav, output, ruby, section, summary,",
+            "time, mark, audio, video {",
+            "margin: 0;",
+            "padding: 0;",
+            "border: 0;",
+            "font-size: 100%;",
+            "font: inherit;",
+            "vertical-align: baseline;",
+            "box-sizing: border-box;",
+            "word-wrap: break-word;",
+            "}",
+            "input,textarea{",
+            "box-sizing: border-box;",
+            "}",
+            "/* HTML5 display-role reset for older browsers */",
+            "article, aside, details, figcaption, figure, ",
+            "footer, header, hgroup, menu, nav, section {",
+            "display: block;",
+            "}",
+            "body {",
+            "line-height: 1;",
+            "-webkit-text-size-adjust: 100%;",
+            "}",
+            "ol, ul {",
+            "list-style: none;",
+            "}",
+            "blockquote, q {",
+            "quotes: none;",
+            "}",
+            "blockquote:before, blockquote:after,",
+            "q:before, q:after {",
+            "content: '';",
+            "content: none;",
+            "}",
+            "table {",
+            "border-collapse: collapse;",
+            "border-spacing: 0;",
+            "}",
+            "a{",
+            "text-decoration: none;",
+            "}",
+            "a:hover{",
+            "text-decoration: none;",
+            "}",
+            "img{",
+            "max-width: 100%;",
+            "height: auto;",
+            "border: 0;",
+            "vertical-align: bottom;",
+            "}"
+        ]
+    },
+    // リセットCSSここまで //
 
     // css設定ここから //
     "@charset 'utf-8'": {
@@ -261,207 +244,175 @@
             "@charset \"utf-8\";",
             "",
             "// $1ここから //",
-            "// $1ここまで //",
-        ],
+            "// $1ここまで //"
+        ]
     },
     // css設定ここまで //
 
-	// コメント ここから //
-	"comment css scss": {
-		"scope": "css,scss",
-		"prefix": "koko",
-		"body": [
-			" $1 ここから ",
-			" $1 ここまで ",
-		],
-	},
-	// コメント ここまで //
+    // コメント ここから //
+    "comment css scss": {
+        "scope": "css,scss",
+        "prefix": "koko",
+        "body": [" $1 ここから ", " $1 ここまで "]
+    },
+    // コメント ここまで //
 
-	// フォント設定ここから //
-	"font 游ゴシック": {
-		"scope": "css,scss",
-		"prefix": "!yuugothic",
-		"body": [
-			"'游ゴシック', 'YuGothic', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka,'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;"
-		],
-	},
-	
-	"font helvetica": {
-		"scope": "css,scss",
-		"prefix": "!helvetica",
-		"body": [
-			"'Helvetica','Hiragino Sans','Hiragino Kaku Gothic ProN', 'Arial', 'Yu Gothic', 'Meiryo', sans-serif;",
-		],
-	},
+    // フォント設定ここから //
+    "font 游ゴシック": {
+        "scope": "css,scss",
+        "prefix": "!yuugothic",
+        "body": [
+            "'游ゴシック', 'YuGothic', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka,'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;"
+        ]
+    },
 
-	"font serif template setting": {
-		"scope": "css,scss",
-		"prefix": "!seriftempate",
-		"body": [
-			"'Times New Roman', 'YuMincho', 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', serif;",
-		],
-	},
-    
-	"local font setting": {
-		"scope": "css,scss",
-		"prefix": "!localfont",
-		"body": [
-			"@font-face {",
+    "font helvetica": {
+        "scope": "css,scss",
+        "prefix": "!helvetica",
+        "body": [
+            "'Helvetica','Hiragino Sans','Hiragino Kaku Gothic ProN', 'Arial', 'Yu Gothic', 'Meiryo', sans-serif;"
+        ]
+    },
+
+    "font serif template setting": {
+        "scope": "css,scss",
+        "prefix": "!seriftempate",
+        "body": [
+            "'Times New Roman', 'YuMincho', 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', serif;"
+        ]
+    },
+
+    "local font setting": {
+        "scope": "css,scss",
+        "prefix": "!localfont",
+        "body": [
+            "@font-face {",
             "    font-family: \"HankenGrotesk\"; /* フォント名 */",
             "    src: url(\"../fonts/static/HankenGrotesk-Bold.ttf\") format(\"woff\");",
             "    src: url(\"../fonts/static/HankenGrotesk-ExtraBold.ttf\") format(\"woff\");",
             "    src: url(\"../fonts/static/HankenGrotesk-Medium.ttf\") format(\"woff\");",
-            "}",
-		],
-	},
+            "}"
+        ]
+    },
 
     "color": {
-		"scope": "css, scss",
-		"prefix": "color",
-		"body": [
-			"color: #$fff;",
-		],
-	},
-	// フォント設定ここまで //
+        "scope": "css, scss",
+        "prefix": "color",
+        "body": ["color: #$fff;"]
+    },
+    // フォント設定ここまで //
 
     // コンポーネント設計ここから //
-	"@use": {
-		"scope": "scss",
-		"prefix": "atu",
-		"body": [
-			"@use '$1';",
-		],
-	},
+    "@use": {
+        "scope": "scss",
+        "prefix": "atu",
+        "body": ["@use '$1';"]
+    },
 
     "@forward": {
         "scope": "scss",
         "prefix": "atf",
-        "body": [
-            "@forward '$1';",
-        ],
+        "body": ["@forward '$1';"]
     },
 
     "@mixin": {
         "scope": "scss",
         "prefix": "atm",
-        "body": [
-            "@mixin $1 {",
-            "   $2",
-            "}",
-        ],
+        "body": ["@mixin $1 {", "   $2", "}"]
     },
 
-	"@include": {
-		"scope": "scss",
-		"prefix": "ati",
-		"body": [
-			"@include $1;",
-		],
-	},
+    "@include": {
+        "scope": "scss",
+        "prefix": "ati",
+        "body": ["@include $1;"]
+    },
 
-	"@if": {
-		"scope": "scss",
-		"prefix": "atif",
-		"body": [
-			"@if $$type == btn__primary$1 {",
+    "@if": {
+        "scope": "scss",
+        "prefix": "atif",
+        "body": [
+            "@if $$type == btn__primary$1 {",
             "} @else if $$type == btn__secondary$2 {",
-            "}",
-		],
-	},
+            "}"
+        ]
+    },
 
-	"@for": {
-		"scope": "scss",
-		"prefix": "atfor",
-		"body": [
-			"@for $$i from 1 through 3$1 {",
+    "@for": {
+        "scope": "scss",
+        "prefix": "atfor",
+        "body": [
+            "@for $$i from 1 through 3$1 {",
             "    .item#{$$i} {",
             "        width: 100%$2;",
             "    }",
-            "}",
-		],
-	},
+            "}"
+        ]
+    },
 
-	"@content": {
-		"scope": "scss",
-		"prefix": "atc",
-		"body": [
-			"@content;",
-		],
-	},
+    "@content": {
+        "scope": "scss",
+        "prefix": "atc",
+        "body": ["@content;"]
+    },
 
-	"@function": {
-		"scope": "scss",
-		"prefix": "atfunc",
-		"body": [
-			"@function $1() {",
-            "    @return ;",
-            "}",
-		],
-	},
+    "@function": {
+        "scope": "scss",
+        "prefix": "atfunc",
+        "body": ["@function $1() {", "    @return ;", "}"]
+    },
 
-	"@media query max": {
-		"scope": "scss",
-		"prefix": "atmax",
-		"body": [
-			"@include max($1) {",
-            "}",
-		],
-	},
+    "@media query max": {
+        "scope": "scss",
+        "prefix": "atmax",
+        "body": ["@include max($1) {", "}"]
+    },
 
-	"@media query min": {
-		"scope": "scss",
-		"prefix": "atmin",
-		"body": [
-			"@include min($1) {",
-            "}",
-		],
-	},
+    "@media query min": {
+        "scope": "scss",
+        "prefix": "atmin",
+        "body": ["@include min($1) {", "}"]
+    },
 
-	"@media query between": {
-		"scope": "scss",
-		"prefix": "atbet",
-		"body": [
-			"@include between($1,$2) {",
-            "}",
-		],
-	},
+    "@media query between": {
+        "scope": "scss",
+        "prefix": "atbet",
+        "body": ["@include between($1,$2) {", "}"]
+    },
     // コンポーネント設計ここまで //
-	
-	// CSS・SCSSここから //
-	"base": {
-		"scope": "css, scss",
-		"prefix": "base",
-		"body": [
-			".base {",
+
+    // CSS・SCSSここから //
+    "base": {
+        "scope": "css, scss",
+        "prefix": "base",
+        "body": [
+            ".base {",
             "   width: 100%;",
             "   max-width: 1000$1px;",
             "   margin: 0 auto;",
             "   padding: 0 15px;",
-            "}",
-        ],
-	},
-	
-	"box shadow": {
-		"scope": "scss",
-		"prefix": "shadow",
-		"body": [
-			"box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5$1);",
-		],
-	},
-	
-	"background url settings": {
-		"scope": "css,scss",
-		"prefix": "bgimage",
-		"body": [
-			"background: url(../img/top/bg_top.png$1) no-repeat 50% 50% / cover;",
-		],
-	},
+            "}"
+        ]
+    },
+
+    "box shadow": {
+        "scope": "scss",
+        "prefix": "shadow",
+        "body": ["box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5$1);"]
+    },
+
+    "background url settings": {
+        "scope": "css,scss",
+        "prefix": "bgimage",
+        "body": [
+            "background: url(../img/top/bg_top.png$1) no-repeat 50% 50% / cover;"
+        ]
+    },
 
     // You Tubeの埋め込みレスポンシブ対応ここから //
     "modern youtube set": {
-		"scope": "css",
-		"prefix": "youtubemoderncss",
-		"body": [
+        "scope": "css",
+        "prefix": "youtubemoderncss",
+        "body": [
             ".youtube {",
             "    width: 100%;",
             "    aspect-ratio: 16 / 9;",
@@ -470,14 +421,14 @@
             ".youtube iframe {",
             "    width: 100%;",
             "    height: 100%;",
-            "}",
-		],
-	},
-    
+            "}"
+        ]
+    },
+
     "standard youtube set": {
-		"scope": "css",
-		"prefix": "youtubestandardcss",
-		"body": [
+        "scope": "css",
+        "prefix": "youtubestandardcss",
+        "body": [
             ".youtube {",
             "    position: relative;",
             "    width: 100%;",
@@ -490,233 +441,184 @@
             "    right: 0;",
             "    width: 100%;",
             "    height: 100%;",
-            "}",
-		],
-	},
+            "}"
+        ]
+    },
     // You Tubeの埋め込みレスポンシブ対応ここまで //
 
+    "media query": {
+        "scope": "css,scss",
+        "prefix": "media",
+        "body": ["@media screen and (max-width: 767$1px) {", "}"]
+    },
 
-	"media query": {
-		"scope": "css,scss",
-		"prefix": "media",
-		"body": [
-			"@media screen and (max-width: 767$1px) {",
-			"}",
-		],
-	},
+    "media query >": {
+        "scope": "css,scss",
+        "prefix": "mediawidth",
+        "body": ["@media screen and (767px < width < 899$1px) {", "}"]
+    },
 
-	"media query >": {
-		"scope": "css,scss",
-		"prefix": "mediawidth",
-		"body": [
-			"@media screen and (767px < width < 899$1px) {",
-			"}",
-		],
-	},
+    "width max-width": {
+        "scope": "css,scss",
+        "prefix": "maxwidth",
+        "body": ["width: 100%;", "max-width: $1px;"]
+    },
 
-	"width max-width": {
-		"scope": "css,scss",
-		"prefix": "maxwidth",
-		"body": [
-			"width: 100%;",
-			"max-width: $1px;",
-		],
-	},
+    "flex box": {
+        "scope": "css,scss",
+        "prefix": "flexbox",
+        "body": [
+            "display: flex;",
+            "flex-direction: column;",
+            "flex-wrap: wrap;",
+            "justify-content: center;",
+            "align-items: center;",
+            "gap: 0px 0%;",
+            "$1"
+        ]
+    },
 
-	"flex box": {
-		"scope": "css,scss",
-		"prefix": "flexbox",
-		"body": [
-			"display: flex;",
-			"flex-direction: column;",
-			"flex-wrap: wrap;",
-			"justify-content: center;",
-			"align-items: center;",
-			"gap: 0px 0%;",
-			"$1",
-		],
-	},
-
-	"css variable setting": {
-		"scope": "css",
-		"prefix": "!:root",
-		"body": [
+    "css variable setting": {
+        "scope": "css",
+        "prefix": "!:root",
+        "body": [
             "/* CSS変数定義ここから */",
             ":root {",
             "   --sliderSpeed: 30s;",
             "}",
             "/* CSS変数定義ここまで */",
-            "$1",
-		],
-	},
+            "$1"
+        ]
+    },
 
-	"css title font": {
-		"scope": "css, scss",
-		"prefix": "ttlfont",
-		"body": [
-			"text-align: center;",
-			"font-size: 34px;",
-			"font-weight: 700;",
-			"letter-spacing: 0.05em;",
-			"line-height: 1em;",
-		],
-	},
-	
+    "css title font": {
+        "scope": "css, scss",
+        "prefix": "ttlfont",
+        "body": [
+            "text-align: center;",
+            "font-size: 34px;",
+            "font-weight: 700;",
+            "letter-spacing: 0.05em;",
+            "line-height: 1em;"
+        ]
+    },
+
     "css text font": {
-		"scope": "css, scss",
-		"prefix": "txtfont",
-		"body": [
-			"text-align: center;",
-			"font-size: 16px;",
-			"font-weight: 500;",
-			"letter-spacing: 0.05em;",
-			"line-height: 1.75em;",
-		],
-	},
+        "scope": "css, scss",
+        "prefix": "txtfont",
+        "body": [
+            "text-align: center;",
+            "font-size: 16px;",
+            "font-weight: 500;",
+            "letter-spacing: 0.05em;",
+            "line-height: 1.75em;"
+        ]
+    },
 
-	"padding": {
-		"scope": "css,scss",
-		"prefix": "p",
-		"body": [
-			"padding: 0 0$1 0;",
-		],
-	},
+    "padding": {
+        "scope": "css,scss",
+        "prefix": "p",
+        "body": ["padding: 0 0$1 0;"]
+    },
 
-	"margin": {
-		"scope": "css,scss",
-		"prefix": "m",
-		"body": [
-			"margin: 0 0$1 0;",
-		],
-	},
+    "margin": {
+        "scope": "css,scss",
+        "prefix": "m",
+        "body": ["margin: 0 0$1 0;"]
+    },
 
-	"margin center": {
-		"scope": "css,scss",
-		"prefix": "mz",
-		"body": [
-			"margin: 0$1 auto;",
-		],
-	},
+    "margin center": {
+        "scope": "css,scss",
+        "prefix": "mz",
+        "body": ["margin: 0$1 auto;"]
+    },
 
-	"absolute": {
-		"scope": "css,scss",
-		"prefix": "positionabsolute",
-		"body": [
-			"position: absolute;",
-			"top: 0$1;",
-			"left: 0;",
-			"z-index: 0;",
-		],
-	},
+    "absolute": {
+        "scope": "css,scss",
+        "prefix": "positionabsolute",
+        "body": ["position: absolute;", "top: 0$1;", "left: 0;", "z-index: 0;"]
+    },
 
-	"font feature settings": {
-		"scope": "css,scss",
-		"prefix": "ffs",
-		"body": [
-			"font-feature-settings: 'palt';"
-		],
-	},
+    "font feature settings": {
+        "scope": "css,scss",
+        "prefix": "ffs",
+        "body": ["font-feature-settings: 'palt';"]
+    },
 
-	"border": {
-		"scope": "css,scss",
-		"prefix": "border",
-		"body": [
-			"border: solid 1px #000$1;",
-		],
-	},
+    "border": {
+        "scope": "css,scss",
+        "prefix": "border",
+        "body": ["border: solid 1px #000$1;"]
+    },
 
-	"border top": {
-		"scope": "css,scss",
-		"prefix": "bordertop",
-		"body": [
-			"border-top: solid 1px #000$1;",
-		],
-	},
-	
-	"border right": {
-		"scope": "css,scss",
-		"prefix": "borderright",
-		"body": [
-			"border-right: solid 1px #000$1;",
-		],
-	},
-	
-	"border bottom": {
-		"scope": "css,scss",
-		"prefix": "borderbottom",
-		"body": [
-			"border-bottom: solid 1px #000$1;",
-		],
-	},
-	
-	"border left": {
-		"scope": "css,scss",
-		"prefix": "borderleft",
-		"body": [
-			"border-left: solid 1px #000$1;",
-		],
-	},
+    "border top": {
+        "scope": "css,scss",
+        "prefix": "bordertop",
+        "body": ["border-top: solid 1px #000$1;"]
+    },
 
-	"gird center": {
-		"scope": "css,scss",
-		"prefix": "gridcenter",
-		"body": [
-			"display: grid;",
-			"place-items: center;",
-			"$1",
-		],
-	},
-	
-	"hover opacity": {
-		"scope": "css,scss",
-		"prefix": "hoveropacity",
-		"body": [
-			".hover__opacity {",
-			"opacity: 1;",
-			"transition: all 0.4s ease-in;",
-			"}",
-			"",
-			".hover__opacity:hover {",
-			"opacity: 0.1;",
-			"}",
-		],
-	},
-	
-	"nth child": {
-		"scope": "css,scss",
-		"prefix": ":nthchild",
-		"body": [
-			":nth-child($1) {",
-			"   $2",
-			"}",
-		],
-	},
+    "border right": {
+        "scope": "css,scss",
+        "prefix": "borderright",
+        "body": ["border-right: solid 1px #000$1;"]
+    },
 
-	"nth child obb": {
-		"scope": "css,scss",
-		"prefix": ":nthchildodd",
-		"body": [
-			":nth-of-type(odd) {",
-            "   $1",
-			"}",
-		],
-	},
+    "border bottom": {
+        "scope": "css,scss",
+        "prefix": "borderbottom",
+        "body": ["border-bottom: solid 1px #000$1;"]
+    },
 
-	"nth child even": {
-		"scope": "css,scss",
-		"prefix": ":nthchildeven",
-		"body": [
-			":nth-of-type(even) {",
-            "   $1",
+    "border left": {
+        "scope": "css,scss",
+        "prefix": "borderleft",
+        "body": ["border-left: solid 1px #000$1;"]
+    },
+
+    "gird center": {
+        "scope": "css,scss",
+        "prefix": "gridcenter",
+        "body": ["display: grid;", "place-items: center;", "$1"]
+    },
+
+    "hover opacity": {
+        "scope": "css,scss",
+        "prefix": "hoveropacity",
+        "body": [
+            ".hover__opacity {",
+            "opacity: 1;",
+            "transition: all 0.4s ease-in;",
             "}",
-		],
-	},
-	
-	"pc sp layout": {
-		"scope": "css,scss",
-		"prefix": "!pcsp",
-		"body": [
-			"@media screen and (min-width: 768px) {",
+            "",
+            ".hover__opacity:hover {",
+            "opacity: 0.1;",
+            "}"
+        ]
+    },
+
+    "nth child": {
+        "scope": "css,scss",
+        "prefix": ":nthchild",
+        "body": [":nth-child($1) {", "   $2", "}"]
+    },
+
+    "nth child obb": {
+        "scope": "css,scss",
+        "prefix": ":nthchildodd",
+        "body": [":nth-of-type(odd) {", "   $1", "}"]
+    },
+
+    "nth child even": {
+        "scope": "css,scss",
+        "prefix": ":nthchildeven",
+        "body": [":nth-of-type(even) {", "   $1", "}"]
+    },
+
+    "pc sp layout": {
+        "scope": "css,scss",
+        "prefix": "!pcsp",
+        "body": [
+            "@media screen and (min-width: 768px) {",
             "    .sp {",
             "        display: none;",
             "    }",
@@ -725,71 +627,71 @@
             "    .pc {",
             "        display: none;",
             "    }",
+            "}"
+        ]
+    },
+
+    "background object": {
+        "scope": "css,scss",
+        "prefix": "bgobject",
+        "body": [
+            ".bg__object {",
+            "position: relative;",
+            "z-index: 10;",
             "}",
-		],
-	},
-	
-	"background object": {
-		"scope": "css,scss",
-		"prefix": "bgobject",
-		"body": [
-			".bg__object {",
-				"position: relative;",
-				"z-index: 10;",
-			"}",
-				"",
-			".bg__object::after {",
-			"   content: '';",
-			"   position: absolute;",
-			"   top: 100px;",
-			"   left: 50px;",
-			"   z-index: -10;",
-			"   width: 50vw;",
-			"   height: 100px;",
-			"   background: red;",
-			"}",
-		],
-	},
-    
-	"before": {
-		"scope": "css,scss",
-		"prefix": "before",
-		"body": [
-			"&::before {",
-			"   content: '';",
-			"   position: absolute;",
-			"   top: 100px;",
-			"   left: 50px;",
-			"   z-index: 0$1;",
-			"   width: 50px;",
-			"   height: 50px;",
-			"   background: red;",
-			"}",
-		],
-	},
+            "",
+            ".bg__object::after {",
+            "   content: '';",
+            "   position: absolute;",
+            "   top: 100px;",
+            "   left: 50px;",
+            "   z-index: -10;",
+            "   width: 50vw;",
+            "   height: 100px;",
+            "   background: red;",
+            "}"
+        ]
+    },
 
-	"after": {
-		"scope": "css,scss",
-		"prefix": "after",
-		"body": [
-			"&::after {",
-			"   content: '';",
-			"   position: absolute;",
-			"   top: 0;",
-			"   left: 0;",
-			"   z-index: 0$1;",
-			"   width: 50px;",
-			"   height: 50px;",
-			"   background: red;",
-			"}",
-		],
-	},
+    "before": {
+        "scope": "css,scss",
+        "prefix": "before",
+        "body": [
+            "&::before {",
+            "   content: '';",
+            "   position: absolute;",
+            "   top: 100px;",
+            "   left: 50px;",
+            "   z-index: 0$1;",
+            "   width: 50px;",
+            "   height: 50px;",
+            "   background: red;",
+            "}"
+        ]
+    },
 
-	"alternating layout": {
-		"scope": "scss",
-		"prefix": "alternating",
-		"body": [
-			"/* 交互要素レイアウトここから */",
+    "after": {
+        "scope": "css,scss",
+        "prefix": "after",
+        "body": [
+            "&::after {",
+            "   content: '';",
+            "   position: absolute;",
+            "   top: 0;",
+            "   left: 0;",
+            "   z-index: 0$1;",
+            "   width: 50px;",
+            "   height: 50px;",
+            "   background: red;",
+            "}"
+        ]
+    },
+
+    "alternating layout": {
+        "scope": "scss",
+        "prefix": "alternating",
+        "body": [
+            "/* 交互要素レイアウトここから */",
             ".sec__templates {",
             "    .base {",
             "        width: 100%;",
@@ -824,38 +726,252 @@
             "        }",
             "    }",
             "}",
-            "/* 交互要素レイアウトここまで */",
-		],
-	},
-	
-	// CSSここまで //
-    
+            "/* 交互要素レイアウトここまで */"
+        ]
+    },
+
+    "_vairables.scss default code": {
+        "scope": "scss",
+        "prefix": "!scssvariables",
+        "body": [
+            "@charset \"utf-8\";",
+            "",
+            "@use 'fonts as fonts;",
+            "",
+            "// グローバル変数宣言ここから //",
+            "/* 主なスマホ・タブレット・パソコンのブレイクポイント定義用の配列 */",
+            "$breakpoints: (",
+            "    \"sm\": 480px,",
+            "    \"md\": 767px,",
+            "    \"lg\": 1024px",
+            ");",
+            "",
+            "/* サイト内デフォルトゴシック体の宣言 */",
+            "$fontGothic: 'Big Shoulders Display';",
+            "",
+            "/* カラーの宣言 */",
+            "$baseColor: #fff;",
+            "$mainColor: #151515;",
+            "$accentColor: #D5966C;",
+            "",
+            "// グローバル変数宣言ここまで //"
+        ]
+    },
+
+    "_fonts.scss default code": {
+        "scope": "scss",
+        "prefix": "!scssfonts",
+        "body": [
+            "@charset \"utf-8\";",
+            "",
+            "// ローカルフォント読み込みここから //",
+            "@font-face {",
+            "    font-family: 'Big Shoulders Display';",
+            "    src: url(\"../src/fonts/BigShouldersDisplay-VariableFont_wght.ttf\") format(\"truetype\");",
+            "}",
+            "// ローカルフォント読み込みここまで //"
+        ]
+    },
+    "_fonts.scss default code": {
+        "scope": "scss",
+        "prefix": "!scssfonts",
+        "body": [
+            "@charset \"utf-8\";",
+            "",
+            "// ローカルフォント読み込みここから //",
+            "@font-face {",
+            "    font-family: 'Big Shoulders Display';",
+            "    src: url(\"../src/fonts/BigShouldersDisplay-VariableFont_wght.ttf\") format(\"truetype\");",
+            "}",
+            "// ローカルフォント読み込みここまで //"
+        ]
+    },
+
+    "_br.scss default code": {
+        "scope": "scss",
+        "prefix": "!scssbr",
+        "body": [
+            "@charset \"utf-8\";",
+            "",
+            "@use \"./variables\" as *;",
+            "@use \"./function\" as *;",
+            "@use \"./media_query\" as *;",
+            "",
+            "// brのレスポンシブ対応ここから //",
+            "",
+            "br:where(.lg, .md, .sm) {",
+            "    display: none;",
+            "}",
+            "",
+            "br.lg {",
+            "    @include min(1150px$1) {",
+            "        display: block;",
+            "    }",
+            "}",
+            "",
+            "br.md {",
+            "    @include between(481px, 1149px) {",
+            "        display: block;",
+            "    }",
+            "}",
+            "",
+            "br.sm {",
+            "    @include max(480px) {",
+            "        display: block;",
+            "    }",
+            "}"
+        ]
+    },
+
+    "_base.scss default code": {
+        "scope": "scss",
+        "prefix": "!scssbase",
+        "body": [
+            "@charset \"utf-8\";",
+            "",
+            "// ベースここから //",
+            "@mixin base($objectWidth: 1110px$1, $sidePadding: 15px) {",
+            "    .base {",
+            "        width: 100%;",
+            "        max-width: calc($objectWidth + calc($sidePadding * 2));",
+            "        margin: 0 auto;",
+            "        padding: 0 $sidePadding;",
+            "        @content;",
+            "    }",
+            "}",
+            "// ベースここまで //"
+        ]
+    },
+
+    "_media-query.scss default code": {
+        "scope": "scss",
+        "prefix": "!scssmedia-query",
+        "body": [
+            "@charset \"utf-8\";",
+            "",
+            "@use \"variables\" as variables;",
+            "@use \"function\" as function;",
+            "",
+            "// メディアクエリコンポーネントここから //",
+            "@mixin max($breakpoint) {",
+            "    $value: function.getBreakpointValue($breakpoint);",
+            "    // もし$valueがnullならメディアクエリの生成をスキップ",
+            "    @if $value {",
+            "        @media (max-width: $value) {",
+            "            @content;",
+            "        }",
+            "    }",
+            "}",
+            "",
+            "@mixin min($breakpoint) {",
+            "    $value: function.getBreakpointValue($breakpoint);",
+            "",
+            "    // もし$valueがnullならメディアクエリの生成をスキップ",
+            "    @if $value {",
+            "        @media (min-width: $value) {",
+            "            @content;",
+            "        }",
+            "    }",
+            "}",
+            "",
+            "@mixin between($breakpoint1, $breakpoint2) {",
+            "    $minValue: function.getBreakpointValue($breakpoint1);",
+            "    $maxValue: function.getBreakpointValue($breakpoint2);",
+            "",
+            "    // もし$valueがnullならメディアクエリの生成をスキップ",
+            "    @if $minValue and $maxValue {",
+            "        @media ($minValue < width < $maxValue) {",
+            "            @content;",
+            "        }",
+            "    }",
+            "}",
+            "// メディアクエリコンポーネントここまで //"
+        ]
+    },
+
+    "_functions.scss default code": {
+        "scope": "scss",
+        "prefix": "!scssfunctions",
+        "body": [
+            "@charset \"utf-8\";",
+            "",
+            "@use \"variables\" as variables;",
+            "",
+            "// ブレークポイントの値を取得する関数ここから //",
+            "@function getBreakpointValue($breakpoint) {",
+            "    $value: map-get(variables.$breakpoints, $breakpoint);",
+            "",
+            "    // $valueがnullで、$breakpointが数値型であり、さらに単位を持っているか単位を持っていない場合",
+            "    @if not $value and type-of($breakpoint) == number and (unit($breakpoint) == \"px\" or unit($breakpoint) == \"\") {",
+            "        $value: $breakpoint;",
+            "    } @else if not $value {",
+            "        @warn \"Unknown breakpoint: #{$breakpoint}.\";",
+            "        @return null;",
+            "    }",
+            "",
+            "    @return $value;",
+            "}",
+            "// ブレークポイントの値を取得する関数ここまで //",
+            "",
+            "/*",
+            " svg関数ここから ",
+            "*/",
+            "/*",
+            " svgリンク内での色指定では'#'を使用できないのを",
+            " 色指定の引数を渡す際に通常のカラーコードで指定できるようにする関数 ",
+            "*/",
+            "@function encode($colorCode) {",
+            "    // 色コードから '#' を取り除いて '%23' に置き換えます。",
+            "    $colorCodeStr: inspect($colorCode); // 色コードを文字列に変換します。",
+            "    $colorCodeStr: str-slice($colorCodeStr, 2); // 先頭の '#' を取り除きます。",
+            "    @return \"%23\" + $colorCodeStr;",
+            "}",
+            "",
+            "/* SVG画像（フェイスブック） */",
+            "@function svgFaceBook($strokeColor: \"none\", $fillColor: encode(#fff)) {",
+            "    @return url('data:image/svg+xml;charset=utf-8,<svg viewBox=\"0 0 20 20\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\"><path id=\"Path\" d=\"M18.8958 0H1.10417C0.494167 0 0 0.494167 0 1.10417V18.8967C0 19.5058 0.494167 20 1.10417 20H10.6833V12.255H8.07667V9.23667H10.6833V7.01083C10.6833 4.4275 12.2608 3.02083 14.5658 3.02083C15.67 3.02083 16.6183 3.10333 16.895 3.14V5.84L15.2967 5.84083C14.0433 5.84083 13.8008 6.43667 13.8008 7.31V9.2375H16.79L16.4008 12.2558H13.8008V20H18.8975C19.5058 20 20 19.5058 20 18.8958V1.10417C20 0.494167 19.5058 0 18.8958 0Z\" stroke=\"#{$strokeColor}\" fill=\"#{$fillColor}\"/></svg>');",
+            "}",
+            "",
+            "/* SVG画像（インスタ） */",
+            "@function svgInstagram($strokeColor: encode(#fff), $fillColor: encode(#fff)) {",
+            "    @return url('data:image/svg+xml;charset=utf-8,<svg viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><path id=\"Shape\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10 0C7.28417 0 6.94417 0.0116667 5.8775 0.06C2.24583 0.226667 0.2275 2.24167 0.0608333 5.87667C0.0116667 6.94417 0 7.28417 0 10C0 12.7158 0.0116667 13.0567 0.06 14.1233C0.226667 17.755 2.24167 19.7733 5.87667 19.94C6.94417 19.9883 7.28417 20 10 20C12.7158 20 13.0567 19.9883 14.1233 19.94C17.7517 19.7733 19.775 17.7583 19.9392 14.1233C19.9883 13.0567 20 12.7158 20 10C20 7.28417 19.9883 6.94417 19.94 5.8775C19.7767 2.24917 17.7592 0.2275 14.1242 0.0608333C13.0567 0.0116667 12.7158 0 10 0ZM10 1.8025C12.67 1.8025 12.9867 1.8125 14.0417 1.86083C16.7517 1.98417 18.0175 3.27 18.1408 5.96C18.1892 7.01417 18.1983 7.33083 18.1983 10.0008C18.1983 12.6717 18.1883 12.9875 18.1408 14.0417C18.0167 16.7292 16.7542 18.0175 14.0417 18.1408C12.9867 18.1892 12.6717 18.1992 10 18.1992C7.33 18.1992 7.01333 18.1892 5.95917 18.1408C3.2425 18.0167 1.98333 16.725 1.86 14.0408C1.81167 12.9867 1.80167 12.6708 1.80167 10C1.80167 7.33 1.8125 7.01417 1.86 5.95917C1.98417 3.27 3.24667 1.98333 5.95917 1.86C7.01417 1.8125 7.33 1.8025 10 1.8025ZM4.865 10C4.865 7.16417 7.16417 4.865 10 4.865C12.8358 4.865 15.135 7.16417 15.135 10C15.135 12.8367 12.8358 15.1358 10 15.1358C7.16417 15.1358 4.865 12.8358 4.865 10ZM10 13.3333C8.15917 13.3333 6.66667 11.8417 6.66667 10C6.66667 8.15917 8.15917 6.66667 10 6.66667C11.8408 6.66667 13.3333 8.15917 13.3333 10C13.3333 11.8417 11.8408 13.3333 10 13.3333ZM14.1375 4.6625C14.1375 4 14.675 3.4625 15.3383 3.4625C16.0008 3.4625 16.5375 4 16.5375 4.6625C16.5375 5.325 16.0008 5.8625 15.3383 5.8625C14.675 5.8625 14.1375 5.325 14.1375 4.6625Z\" stroke=\"#{$strokeColor}\" fill=\"#{$fillColor}\"/></svg>');",
+            "}",
+            "",
+            "/* SVG画像（ツイッター） */",
+            "@function svgTwitter($strokeColor: encode(#fff), $fillColor: encode(#fff)) {",
+            "    @return url('data:image/svg+xml;charset=utf-8,<svg viewBox=\"0 0 20 17\" xmlns=\"http://www.w3.org/2000/svg\"><path id=\"Path\" d=\"M20 2.17221C19.2642 2.49888 18.4733 2.71888 17.6433 2.81805C18.4908 2.31055 19.1417 1.50638 19.4475 0.548047C18.655 1.01805 17.7767 1.35971 16.8417 1.54388C16.0942 0.74638 15.0267 0.248047 13.8467 0.248047C11.1975 0.248047 9.25083 2.71971 9.84917 5.28555C6.44 5.11471 3.41667 3.48138 1.3925 0.99888C0.3175 2.84305 0.835 5.25555 2.66167 6.47721C1.99 6.45555 1.35667 6.27138 0.804167 5.96388C0.759167 7.86471 2.12167 9.64305 4.095 10.0389C3.5175 10.1955 2.885 10.2322 2.24167 10.1089C2.76333 11.7389 4.27833 12.9247 6.075 12.958C4.35 14.3105 2.17667 14.9147 0 14.658C1.81583 15.8222 3.97333 16.5014 6.29 16.5014C13.9083 16.5014 18.2125 10.0672 17.9525 4.29638C18.7542 3.71721 19.45 2.99471 20 2.17221Z\" stroke=\"#{$strokeColor}\" fill=\"#{$fillColor}\"/></svg>');",
+            "}",
+            "// svg関数ここまで //",
+            "",
+            "$1"
+        ]
+    },
+
+    // CSSここまで //
 
     //JSここから
     "javascript source": {
-		"scope": "html,php",
-		"prefix": "!jslink",
-		"body": [
+        "scope": "html,php",
+        "prefix": "!jslink",
+        "body": [
             "<!--js-->",
             "   <script src='<?php echo APP_ASSETS; ?>js/vanilla.min.js' defer></script>",
             "<!--/js-->",
-            "$1",
-		],
-	},
+            "$1"
+        ]
+    },
 
     "console log": {
-		"scope": "javascript,typescript",
-		"prefix": "!con",
-		"body": [
-			"console.log($);",
-		],
-	},
-    // scroll animation 
+        "scope": "javascript,typescript",
+        "prefix": "!con",
+        "body": ["console.log($);"]
+    },
+    // scroll animation
     "header change color": {
-		"scope": "javascript,typescript",
-		"prefix": "!scrolltogglclass",
-		"body": [
-			"// ヘッダー内のロゴの色をファーストビューを超えたら変更ここから",
+        "scope": "javascript,typescript",
+        "prefix": "!scrolltogglclass",
+        "body": [
+            "// ヘッダー内のロゴの色をファーストビューを超えたら変更ここから",
             "const headerLogo = document.querySelector('.header__logo');",
             "document.addEventListener('scroll', () => {",
             "   const targetElement = document.querySelector('.fv__hero__wrap');",
@@ -866,8 +982,8 @@
             "       headerLogo.classList.remove('changeColor');",
             "   }",
             "});",
-            "// ヘッダー内のロゴの色をファーストビューを超えたら変更ここまで",
-		],
-	},
+            "// ヘッダー内のロゴの色をファーストビューを超えたら変更ここまで"
+        ]
+    }
     //JSここまで
 }
